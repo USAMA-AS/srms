@@ -12,7 +12,7 @@
     <!-- Main Body -->
     <div class="container">
         <!-- Used to toggle -->
-        <input class="chechkbox"  type="checkbox" id="toggler">
+        <input class="chechkbox" type="checkbox" id="toggler">
         <!-- Side bar -->
         <div class="navigation">
             <ul>
@@ -37,7 +37,7 @@
                 <li>
                     <a href="#">
                         <span class="icon"><i class="fa fa-vcard-o"></i></span>
-                        <span class="title">Update Student</span>
+                        <span class="title">Manage Result</span>
                     </a>
                 </li>
                 <li>
@@ -69,49 +69,61 @@
                 </div>
             </div>
 
-            <div class="banner">
-                <img src="/images/banner.jpeg" alt="">
+           <!-- Form -->
+           <div class="addstudentcontainer">
+            <div class="title">Add Student</div>
+            <div class="content">
+              <form action="#">
+                <div class="user-details">
+                  <div class="input-box">
+                    <span class="details">FirstName</span>
+                    <input type="text" placeholder="Enter FirstName" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Lastname</span>
+                    <input type="text" placeholder="Enter Lastname" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Class</span>
+                    <input type="text" placeholder="Enter Class" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Section</span>
+                    <input type="text" placeholder="Enter Section" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Enroll Year</span>
+                    <input type="text" placeholder="Enter Enrollment Year" required>
+                  </div>
+                </div>
+                <div class="result-details">
+                  <input type="radio" name="result" id="dot-1">
+                  <input type="radio" name="result" id="dot-2">
+                  <input type="radio" name="result" id="dot-3">
+                  <span class="result-title">Result</span>
+                  <div class="category">
+                    <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="result">Pass</span>
+                  </label>
+                  <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="result">Fail</span>
+                  </label>
+                  <label for="dot-3">
+                    <span class="dot three"></span>
+                    <span class="result">Prefer not to say</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="button">
+                  <input type="submit" value="Add Student">
+                </div>
+              </form>
             </div>
-            <!-- cards -->
-            <div class="cardBox">
-                <div class="card1 card">
-                    <div>
-                        <div class="numbers">7</div>
-                        <div class="cardName">Registered Students</div>
-                    </div>
-                    <div class="iconBx">
-                        <i class="fa fa-users"></i>
-                    </div>
-                </div>
-                <div class="card2 card">
-                    <div>
-                        <div class="numbers">6</div>
-                        <div class="cardName">Subjects Listed</div>
-                    </div>
-                    <div class="iconBx">
-                        <i class="fa fa-eye"></i>
-                    </div>
-                </div>
-                <div class="card3 card">
-                    <div>
-                        <div class="numbers">10</div>
-                        <div class="cardName">Total Classes</div>
-                    </div>
-                    <div class="iconBx">
-                        <i class="fa fa-user"></i>
-                    </div>
-                </div>
-                <div class="card4 card">
-                    <div>
-                        <div class="numbers">9</div>
-                        <div class="cardName">Results Declared</div>
-                    </div>
-                    <div class="iconBx">
-                        <i class="fa fa-vcard-o"></i>
-                    </div>
-                </div>
+          </div>
 
-            </div>
+            
 
         </div>
     </div>
