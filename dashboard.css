@@ -45,7 +45,7 @@ input:checked ~ .main {
     height: 35px;
     border-radius: 6px;
     margin: 10px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .navigation ul{
