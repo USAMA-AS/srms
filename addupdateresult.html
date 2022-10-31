@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Main Body -->
+    <div class="container">
+        <!-- Used to toggle -->
+        <input class="chechkbox" type="checkbox" id="toggler">
+        <!-- Side bar -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/index.html">
+                       <img class="icon1" src="/images/logo.png"   alt="">
+                        <span class="title">SRMS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index.html">
+                        <span class="icon"><i class="fa fa-users"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/totalstudents.html">
+                        <span class="icon"><i class="fa fa-users"></i></span>
+                        <span class="title">Total Students</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/addstudent.html">
+                        <span class="icon"><i class="fa fa-user"></i></span>
+                        <span class="title">Add Student</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/updatestudent.html">
+                        <span class="icon"><i class="fa fa-vcard-o"></i></span>
+                        <span class="title">Update Student</span>
+                    </a>
+                </li>
+                <li>
+                  <a href="/viewresult.html">
+                      <span class="icon"><i class="fa fa-users"></i></span>
+                      <span class="title">View Result</span>
+                  </a>
+              </li>
+              <li>
+                <a href="/addupdateresult.html">
+                    <span class="icon"><i class="fa fa-users"></i></span>
+                    <span class="title">Add/Update Result</span>
+                </a>
+            </li>
+            </ul>
+        </div>
+
+<!-- content -->
+
+        <div class="main">
+            
+            <div class="topbar">
+                <div class="toggle">
+                    
+                    <label for="toggler"><i class="fa fa-bars"></i></label>
+                </div>
+                <div class="user">
+                    <img src="/images/avatar.jpeg" alt="">
+                </div>
+            </div>
+
+           <!-- Form -->
+           <div class="totalstudents">
+            <div class="resultstdid">
+                <label for="id">Enter Student Id/Rollnumber: </label>
+                <input type="text" id="id">
+            </div>
+            <br>
+            <table>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Class</th>
+                    <th>Credits Hour</th>
+                    <th>Grade</th>
+    
+                </tr>
+                <tr>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+            </table>
+            <div class="updateresult">
+                <br><label for="totalgpa">Obtain Gpa: </label>
+                <input type="text" id="totalgpa"><br><br>
+                <button class="mainbutton">Add/Update Result</button>
+            </div>
+    </div>
+   
+            <!-- end side body -->
+        </div>
+<!-- endm main body -->
+    </div> 
+
+</body>
+</html>

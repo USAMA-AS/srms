@@ -58,7 +58,6 @@
                     <span class="title">Add/Update Result</span>
                 </a>
             </li>
-             
             </ul>
         </div>
 
@@ -76,61 +75,67 @@
                 </div>
             </div>
 
-           <!-- Form -->
-           <div class="addstudentcontainer">
-            <div class="title">Add Student</div>
-            <div class="content">
-              <form action="#">
-                <div class="user-details">
-                  <div class="input-box">
-                    <span class="details">FirstName</span>
-                    <input type="text" placeholder="Enter FirstName" required>
-                  </div>
-                  <div class="input-box">
-                    <span class="details">Lastname</span>
-                    <input type="text" placeholder="Enter Lastname" required>
-                  </div>
-                  <div class="input-box">
-                    <span class="details">Class</span>
-                    <input type="text" placeholder="Enter Class" required>
-                  </div>
-                  <div class="input-box">
-                    <span class="details">Section</span>
-                    <input type="text" placeholder="Enter Section" required>
-                  </div>
-                  <div class="input-box">
-                    <span class="details">Enroll Year</span>
-                    <input type="text" placeholder="Enter Enrollment Year" required>
-                  </div>
-                </div>
-                <div class="result-details">
-                  <input type="radio" name="result" id="dot-1">
-                  <input type="radio" name="result" id="dot-2">
-                  <input type="radio" name="result" id="dot-3">
-                  <span class="result-title">Status</span>
-                  <div class="category">
-                    <label for="dot-1">
-                    <span class="dot one"></span>
-                    <span class="result">Pass</span>
-                  </label>
-                  <label for="dot-2">
-                    <span class="dot two"></span>
-                    <span class="result">Fail</span>
-                  </label>
-                  <label for="dot-3">
-                    <span class="dot three"></span>
-                    <span class="result">Pending</span>
-                    </label>
-                  </div>
-                </div>
-                <!-- <div class="button">
-                  <input type="submit" value="Add Student">
-                </div> -->
-                <a href="/addupdateresult.html"><button class="mainbutton">Add/Update Result</button></a>
-              </form>
-            </div>
-          </div>
+           <!-- view result -->
+           <div class="resulttable">
+           <table>
+            <tr>
+                <th>Code</th>
+                <th>Course Name</th>
+                <th>Class</th>
+                <th>Credits Hour</th>
+                <th>Grade</th>
+             
+            </tr>
+              <tr>
+                <td>CS 225 </td>
+                <td>Data Structures </td>
+                <td> Fall 2022</td>
+                <td> 3.0 </td>
+                <td> A </td>
+   
+              </tr>
+              <tr>
+                <td>PHIL 105 </td>
+                <td>Ethics </td>
+                <td> Fall 2022</td>
+                <td> 3.0 </td>
+                <td> A- </td>
+        
+              </tr>
+              <tr>
+                <td>ECE 310 </td>
+                <td>Digital Signal Processing </td>
+                <td> Fall 2022</td>
+                <td> 3.0 </td>
+                <td> A </td>
+              
+              </tr>
+              <tr>
+                <td>CS 373 </td>
+                <td>Combinatorial Algorithms </td>
+                <td> Fall 2022</td>
+                <td> 3.0 </td>
+                <td> B+ </td>
+       
+              </tr>
+              <tr>
+                <td>MATH 225 </td>
+                <td>Multi-Variable Calculus </td>
+                <td> Fall 2022</td>
+                <td> 3.0 </td>
+                <td> A- </td>
 
+              </tr>
+          </table>
+          <div class="gpa">
+          <h5>Total Gpa : 3.75/4</h5>
+            <h3>Status : Pass</h3>
+        </div>
+        <div class="viewresultbuttons">
+            <a href="/addupdateresult.html"><button class="mainbutton">Add/Update Result</button></a>
+        </div>
+        
+        </div>
             
 
         </div>
