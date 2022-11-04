@@ -1,266 +1,316 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-:root{
-    --blue:#03203C;
-    --white: #fff;
-    --grey:#f5f5f5;
-    --black1:#222;
-    --black2:#999;
-    --changecolor1:#ac4de2;
-    --changecolor2:#ed481e;
-    --changecolor3:#ed9e1e;
-}
-.mainbutton{
 
-    border: 1px solid var(--blue);
-    background-color: var(--white);
-    color: var(--black1);
-    padding: 5px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-.mainbutton:hover{
-    background: linear-gradient(-135deg, #71b7e6, var(--blue));
-    color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-body{
-    min-height: 100vh;
-    overflow-x: hidden;
+/* predifne body hight  */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.container{
-    position: relative;
-    width: 100%;
+/* Predefined all colors */
+
+:root {
+  --blue: #03203C;
+  --white: #fff;
+  --grey: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+  --changecolor1: #ac4de2;
+  --changecolor2: #ed481e;
+  --changecolor3: #ed9e1e;
 }
+
+/* Main Container for all pages */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* common button styling where ever main button used styling will be same */
+
+.mainbutton {
+
+  border: 1px solid var(--blue);
+  background-color: var(--white);
+  color: var(--black1);
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.mainbutton:hover {
+  background: linear-gradient(-135deg, #71b7e6, var(--blue));
+  color: white;
+}
+
+
 
 /*********************/
 /* sidebar nav        */
 /*********************/
 
-
-.navigation{
-    position: fixed;
-    width: 300px;
-    height: 100%;
-    background: var(--blue);
-    border-left: 10px solid var(--blue);
-    transition: 0.5s;
-    overflow: hidden;
-}
-.chechkbox[type="checkbox"]{
-    display: none;
-}
-input:checked ~ .navigation {
- width: 80px;
-}
-input:checked ~ .main {
- width: calc(100% - 80px);
- left: 80px;
+/* main navigation sidebaar */
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  overflow: hidden;
 }
 
-
-.navigation ul{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
 }
 
-.navigation ul li{
-    position: relative;
-    width: 100%;
-    list-style: none;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-.navigation ul li:hover{
-    background-color: var(--white);
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
-.navigation ul li a{
-    position: relative;
-    display: flex;
-    width: 100%;
-    text-decoration: none;
-    color: var(--white);
-}
-.navigation ul li:hover a{
-    color: var(--blue);
-}
-.navigation ul li a .icon{
-    position: relative;
-    display: inline-block;
-    min-width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-}
-.fa{
-  font-size: 1.75em;  
+/* navigation items clor will become white on hover */
+.navigation ul li:hover {
+  background-color: var(--white);
 }
 
-.navigation  ul li a .title{
-    position: relative;
-    display: inline-block;
-    padding: 0 10px;
-    height: 60px;
-    line-height: 60px;
-    text-align: start;
-    white-space: nowrap;
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: var(--white);
 }
 
-.navigation  ul li:hover a::before{
-    content: '';
-    position: absolute;
-    right: 0;
-    top: -50px;
-    height: 50px;
-    width: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var(--white);
-    pointer-events: none;
+.navigation ul li:hover a {
+  color: var(--blue);
 }
-.navigation  ul li:hover a::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -50px;
-    height: 50px;
-    width: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var(--white);
-    pointer-events: none;
+
+.navigation ul li a .icon {
+  position: relative;
+  display: inline-block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
 }
-.navigation ul li:nth-child(1){
-    margin-bottom: 40px;
-    background-color: var(--blue);
-    color: var(--white);
-    /* pointer-events:fill; */
+
+/* navigation icons size */
+.fa {
+  font-size: 1.75em;
 }
-.navigation ul li:nth-child(1) a:hover{
-    
-    margin-bottom: 40px;
-    background-color: var(--blue);
-    color: var(--white);
-    border-radius: 0 !important;
+
+.navigation ul li a .title {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
 }
-.navigation ul li:nth-child(1) a::before{
-    border-radius: 0 !important;
-    box-shadow: none;
+
+.navigation ul li:hover a::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
 }
-.navigation ul li:nth-child(1) a::after{
-    border-radius: 0 !important;
-    box-shadow: none;
+
+.navigation ul li:hover a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
 }
-.icon1{
-    width: 50px;
-    height: 50px;
-    border-radius: 6px;
-    margin: 7px;
-    margin-left: 5px;
+
+/* navigation side bar first item adjusted like it will be differnt from all other navigation items */
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.navigation ul li:nth-child(1) a:hover {
+
+  margin-bottom: 40px;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 0 !important;
+}
+
+.navigation ul li:nth-child(1) a::before {
+  border-radius: 0 !important;
+  box-shadow: none;
+}
+
+.navigation ul li:nth-child(1) a::after {
+  border-radius: 0 !important;
+  box-shadow: none;
 }
 
 
-/* main */
-.main{
-    position: absolute;
-    width: calc(100% - 300px);
-    left: 300px;
-    min-height: 100vh;
-    background: var(--white);
-    transition: 0.5s;
+/* logo icon styling */
+.icon1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  margin: 7px;
+  margin-left: 5px;
 }
-.topbar{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between !important;
-    align-items: center;
-    padding: 0 10px;
+
+
+/* main content of all pages */
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+
+/* Topbar for toggle and user  icon  */
+.topbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  padding: 0 10px;
 
 }
+
 /*********************/
 /* toggle icon      */
 /*********************/
 
-.toggle{
-    position: relative;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* font-size: 1.5em; */
-    cursor: pointer !important;
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer !important;
+}
 
+/* for toggle chechkbx is declared with the same id as toggle icon id */
+.chechkbox[type="checkbox"] {
+  display: none;
+}
+
+/* when toogle icon clicked width of side navigation bar will be 80px */
+input:checked~.navigation {
+  width: 80px;
+}
+
+/* after toggle main section width will be adjust */
+input:checked~.main {
+  width: calc(100% - 80px);
+  left: 80px;
 }
 
 
 /*******************************/
 /* User dropdown login/logout  */
 /*******************************/
-.rightdropdowns{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.rightdropdowns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.color{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    min-width: 150px;
-    padding: 14px;
+
+.color {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 150px;
+  padding: 14px;
 }
-.color span{
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+
+.color span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
 }
+
 .dropbtn {
-    border-radius: 10px;
-    margin-right: 10px;
-  }
+  border-radius: 10px;
+  margin-right: 10px;
+}
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 10px;
-    background-color: var(--white);
-    min-width: 90px;
-    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
-    z-index: 1;
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background-color: var(--white);
+  min-width: 90px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* banner image on main page index.html */
+.banner {
+  padding-left: 28px;
+  padding-right: 20px;
+
+}
+
+.banner img {
+  width: 100%;
+  height: 350px;
+}
 
 
 
@@ -269,301 +319,347 @@ input:checked ~ .main {
 /*********************/
 
 
-.cardBox{
-    position: relative;
-    width: 100;
-    padding: 12px 27px;
-    padding-right: 20px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 15px;
-}
-.cardBox .card{
-    position: relative;
-    /* background: var(--white); */
-    padding: 10px;
-    /* border-radius: 20px; */
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+.cardBox {
+  position: relative;
+  width: 100;
+  padding: 12px 27px;
+  padding-right: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
 }
 
-.cardBox .card .numbers{
-    position: relative;
-    font-weight: 500;
-    font-size: 2.5em;
-    color: var(--white);
+.cardBox .card {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
-.cardBox .card .cardName{
-    color: var(--white);
-    font-size: 1.1em;
-    margin-top: 5px;
+
+.cardBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5em;
+  color: var(--white);
 }
-.cardBox .card .iconBx{
-    font-size: 1.5em;
-    color: var(--white);
+
+.cardBox .card .cardName {
+  color: var(--white);
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+  font-size: 1.5em;
+  color: var(--white);
 }
 
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .iconBx,
-.cardBox .card:hover .cardName
-{
-color: rgb(238, 233, 221);
+.cardBox .card:hover .cardName {
+  color: rgb(238, 233, 221);
 }
-.card1{
-    background-color: #325d86;;
+
+.card1 {
+  background-color: #325d86;
+  ;
 }
-.card2{
-    background-color: rgb(206, 171, 14);
+
+.card2 {
+  background-color: rgb(206, 171, 14);
 }
-.card3{
-    background-color: rgb(153, 153, 4);
+
+.card3 {
+  background-color: rgb(153, 153, 4);
 }
-.card4{
-    background-color: rgb(73, 73, 225);
+
+.card4 {
+  background-color: rgb(73, 73, 225);
 }
 
 
-/* banner */
-.banner{
-    padding-left:28px;
-    padding-right: 20px;
-    
-}
-.banner img{
-    width: 100%;
-    height: 350px;
-}
 
 
 /*****************************/
 /**Total Students Table*******/
 /*****************************/
-.totalstudents{
-    padding: 5px 20px 5px 28px
+.totalstudents {
+  padding: 5px 20px 5px 28px
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even){background-color: #f2f2f2}
-  
-  th {
-    background-color: var(--blue);
-    color: white;
-  }
 
-  /*****************************/
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+th {
+  background-color: var(--blue);
+  color: white;
+}
+
+/*****************************/
 /**add Students form*******/
 /*****************************/
 
-.addstudentcontainer{
-    max-width: 100%;
-    width: 100%;
-    background-color: #fff;
-    padding: 0px 20px 0px 27px;
-    border-radius: 5px;
-    /* box-shadow: 0 5px 10px rgba(0,0,0,0.15); */
-  }
-  .addstudentcontainer .title{
-    font-size: 25px;
-    font-weight: 500;
-    position: relative;
-  }
-  .addstudentcontainer .title::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    border-radius: 5px;
-    background: linear-gradient(-135deg, #71b7e6, var(--blue));
-  }
-  .content form .user-details{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 12px 0;
-  }
-  form .user-details .input-box{
-    margin-bottom: 15px;
-    width: calc(100% / 2 - 20px);
-  }
-  form .input-box span.details{
-    display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
-  .user-details .input-box input{
-    height: 45px;
-    width: 100%;
-    outline: none;
-    font-size: 16px;
-    border-radius: 5px;
-    padding-left: 15px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-  }
-  .user-details .input-box input:focus,
-  .user-details .input-box input:valid{
-    border-color: linear-gradient(-135deg, #71b7e6, var(--blue));
- 
-  }
-   form .result-details .result-title{
-    font-size: 20px;
-    font-weight: 500;
-   }
-   form .category{
-     display: flex;
-     width: 80%;
-     margin: 14px 0 ;
-     justify-content: space-between;
-   }
-   form .category label{
-     display: flex;
-     align-items: center;
-     cursor: pointer;
-   }
-   form .category label .dot{
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    margin-right: 10px;
-    background: #d9d9d9;
-    border: 5px solid transparent;
-    transition: all 0.3s ease;
-  }
-   #dot-1:checked ~ .category label .one,
-   #dot-2:checked ~ .category label .two,
-   #dot-3:checked ~ .category label .three{
-     background: linear-gradient(-135deg, #71b7e6, var(--blue));
-     border-color: #d9d9d9;
-   }
-   form input[type="radio"]{
-     display: none;
-   }
-   form .button{
-     height: 45px;
-     margin: 35px 0
-   }
-   form .button input{
-     height: 100%;
-     width: 18%;
-     border-radius: 5px;
-     border: none;
-     color: #fff;
-     font-size: 18px;
-     font-weight: 500;
-     letter-spacing: 1px;
-     cursor: pointer;
-     transition: all 0.3s ease;
-     background: linear-gradient(135deg, #71b7e6, var(--blue));
-   }
-   form .button input:hover{
-    /* transform: scale(0.99); */
-    background: linear-gradient(-135deg, #71b7e6, var(--blue));
-    }
-   @media(max-width: 584px){
-   .addstudentcontainer{
-    max-width: 100%;
-  }
-  .banner{
-   display: none;
-    
+.addstudentcontainer {
+  max-width: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding: 0px 20px 0px 27px;
+  border-radius: 5px;
 }
-  form .user-details .input-box{
-      margin-bottom: 15px;
-      width: 100%;
-    }
-    form .category{
-      width: 100%;
-    }
-    .content form .user-details{
-      max-height: 300px;
-      overflow-y: scroll;
-    }
-    .user-details::-webkit-scrollbar{
-      width: 5px;
-    }
-    }
-    @media(max-width: 459px){
-    .addstudentcontainer .content .category{
-      flex-direction: column;
-    }
-  }
-  
+/* add student page title */
+.addstudentcontainer .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.addstudentcontainer .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(-135deg, #71b7e6, var(--blue));
+}
+
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: linear-gradient(-135deg, #71b7e6, var(--blue));
+
+}
+
+form .result-details .result-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+form .category label .dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three {
+  background: linear-gradient(-135deg, #71b7e6, var(--blue));
+  border-color: #d9d9d9;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form .button {
+  height: 45px;
+  margin: 35px 0
+}
+
+form .button input {
+  height: 100%;
+  width: 18%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, var(--blue));
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, var(--blue));
+}
+
 /* Result table */
 
-.resulttable{
-    padding: 5px 20px 5px 28px
+.resulttable {
+  padding: 5px 20px 5px 28px
 }
-.gpa{
-    padding: 20px;
-    line-height: 1.5rem;
+
+.gpa {
+  padding: 20px;
+  line-height: 1.5rem;
 }
 
 /* ADD/update result */
-.resultstdid{
-    margin: 10px 0;
+.resultstdid {
+  margin: 10px 0;
 }
 
-@media (max-width: 991px) {
-    .navigation{
-        left: -300px;
+/* Media Queries  for responsiveness */
+/* Everything will be adjusted when the screen with will be 992 or less */
+@media (max-width: 992px) {
+  .navigation {
+    left: -300px;
 
-    }
-    input:checked ~ .navigation {
-        width: 300px;
-        left: 0;
-       
-       }
-    .main{
-        width: 100%;
-        left: 0;
-    }
-    input:checked ~ .main {
-        left: 300px;
-       }
+  }
 
-    .cardBox{
-        grid-template-columns: repeat(2,1fr);
-    }
+  input:checked~.navigation {
+    width: 300px;
+    left: 0;
+
+  }
+
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  input:checked~.main {
+    left: 300px;
+  }
+
+  .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+/* Media Queries  for responsiveness */
+/* Will be used when  the screen will be 584px */
+@media(max-width: 584px) {
+  .toggle {
+    justify-content: start;
+  }
+  .rightdropdowns .dropdown:nth-child(2){
+    margin: 0;
+    margin-left: 10px;
+  }
+  .dropbtn {
+    margin: 0;
+  }
+  .totalstudents, .resulttable{
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 0 10px;
+  }
+  .totalstudents table, .resulttable table {
+    width: 800px;
+  }
+  .addstudentcontainer {
+    max-width: 100%;
+  }
+
+  .banner {
+    display: none;
+
+  }
+
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  form .category {
+    width: 100%;
+  }
+
+  .content form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+/* adjust everthing when the screen size will be mobile type */
 @media (max-width: 480px) {
-    .cardBox{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .user{
-        min-height: 40px;
-        right: 0%;
-    }
-    .navigation{
-        width: 100%;
-        left: -100%;
-        z-index: 1000;
-    }
-    input:checked ~ .navigation {
-        width: 100%;
-        left: 0;
-       }
+  .addstudentcontainer .content .category {
+    flex-direction: column;
+  }
+  .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-       .toggle{
-        z-index: 100001;
-       }
+  .user {
+    min-height: 40px;
+    right: 0%;
+  }
 
-       input:checked ~ .main{
-     
-        color: #fff;
-       }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+
+  input:checked~.navigation {
+    width: 100%;
+    left: 0;
+  }
+
+  .toggle {
+    z-index: 100001;
+  }
+
+  input:checked~.main {
+
+    color: #fff;
+  }
 }
-
